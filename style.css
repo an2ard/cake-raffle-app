@@ -28,6 +28,13 @@ body {
     margin-bottom: 12px;
 }
 
+/* Styles the cake icon in the heading */
+.header h1 .material-icons {
+    font-size: 40px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 /* Styles the header description */
 .header p {
     font-size: 17px;
@@ -95,6 +102,7 @@ button {
 
 /* Styles the add participant button */
 .add-button {
+    display: block;
     width: 100%;
     background-color: #ff4081;
 }
@@ -141,6 +149,7 @@ button {
 
 /* Styles the draw winner button */
 .draw-button {
+    display: block;
     width: 100%;
     background-color: #7e57c2;
 }
@@ -153,12 +162,21 @@ button {
 
 /* Styles the reset button */
 .reset-button {
+    display: block;
     width: 100%;
-    background-color: #007bff;
+    padding: 13px 20px;
     margin-top: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Changes the reset button color when hovered over */
+/* Changes the reset button when hovered over */
 .reset-button:hover {
     background-color: #1367c0;
     transform: translateY(-2px);
@@ -190,6 +208,11 @@ button {
     .participants-section,
     .winner-section {
         padding: 20px;
+    }
+
+    /* Reduces the cake icon size */
+    .header h1 .material-icons {
+        font-size: 30px;
     }
 
 }

@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
         participantName.value = "";
 
         // Resets the winner message when a new participant joins.
-        winnerDisplay.textContent = "Waiting for the lucky winner! 🎂";
+        winnerDisplay.innerHTML = "<p>Waiting for the lucky winner! 🎂</p>";
 
     });
 
@@ -99,17 +99,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // Runs when the Reset button is clicked.
     resetButton.addEventListener("click", function() {
 
-        // Clears all participants from the array.
+        // Removes all participants from the array.
         participants.length = 0;
 
-        // Removes all names from the participants list.
+        // Removes all names from the visible participants list.
         participantsList.innerHTML = "";
 
         // Resets the participant counter to zero.
         participantCount.textContent = "Total participants: 0";
 
         // Restores the original winner message.
-        winnerDisplay.textContent = "Waiting for the lucky winner! 🎂";
+        winnerDisplay.innerHTML = "<p>Waiting for the lucky winner! 🎂</p>";
 
         // Clears the name input field.
         participantName.value = "";

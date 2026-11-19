@@ -1,0 +1,182 @@
+
+/* Applies consistent sizing to all page elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles the overall page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff0f5;
+    color: #444444;
+    min-height: 100vh;
+}
+
+/* Styles the main header */
+.header {
+    background-color: #ff4081;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Styles the main header title */
+.header h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+/* Styles the header description */
+.header p {
+    font-size: 17px;
+}
+
+/* Styles the main content container */
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 35px auto;
+}
+
+/* Styles each application section */
+.entry-section,
+.participants-section,
+.winner-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Styles section headings */
+h2 {
+    color: #e91e63;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* Styles form labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Styles the name input field */
+input {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #ffc1d6;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Highlights the input when selected */
+input:focus {
+    outline: none;
+    border-color: #ff4081;
+}
+
+/* Styles all buttons */
+button {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Styles the add participant button */
+.add-button {
+    width: 100%;
+    background-color: #ff4081;
+}
+
+/* Changes the add button when hovered over */
+.add-button:hover {
+    background-color: #e91e63;
+    transform: translateY(-2px);
+}
+
+/* Styles the participant count */
+#participantCount {
+    text-align: center;
+    color: #777777;
+    margin-bottom: 15px;
+}
+
+/* Styles the participants list */
+#participantsList {
+    list-style: none;
+}
+
+/* Styles each participant name */
+#participantsList li {
+    background-color: #fff0f5;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-left: 5px solid #ff4081;
+}
+
+/* Styles the winner display area */
+#winnerDisplay {
+    background-color: #fff0f5;
+    border: 2px dashed #ff80ab;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 19px;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+/* Styles the draw winner button */
+.draw-button {
+    width: 100%;
+    background-color: #7e57c2;
+}
+
+/* Changes the draw button when hovered over */
+.draw-button:hover {
+    background-color: #5e35b1;
+    transform: translateY(-2px);
+}
+
+/* Styles the winner's name */
+.winner-name {
+    color: #e91e63;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+/* Adjusts the layout for mobile screens */
+@media (max-width: 600px) {
+
+    /* Reduces the header title size */
+    .header h1 {
+        font-size: 29px;
+    }
+
+    /* Reduces the container width */
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    /* Reduces section padding */
+    .entry-section,
+    .participants-section,
+    .winner-section {
+        padding: 20px;
+    }
+
+}

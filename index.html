@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cake Raffle</title>
+
+    <!-- Connects the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main page header -->
+    <header class="header">
+        <h1>🍰 Cake Raffle!</h1>
+        <p>Enter your name and get a chance to win a delicious cake!</p>
+    </header>
+
+    <!-- Main application container -->
+    <main class="container">
+
+        <!-- Entry form section -->
+        <section class="entry-section">
+
+            <h2>Join the Raffle!</h2>
+
+            <form id="entryForm">
+
+                <!-- Name input field -->
+                <label for="participantName">Your Name</label>
+
+                <input
+                    type="text"
+                    id="participantName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <!-- Button to add a participant -->
+                <button type="submit" class="add-button">
+                    Add Participant
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Participants list section -->
+        <section class="participants-section">
+
+            <h2>Participants</h2>
+
+            <p id="participantCount">Total participants: 0</p>
+
+            <!-- JavaScript will add names here -->
+            <ul id="participantsList"></ul>
+
+        </section>
+
+        <!-- Winner display section -->
+        <section class="winner-section">
+
+            <h2>And the winner is...</h2>
+
+            <!-- Winner's name will appear here -->
+            <div id="winnerDisplay">
+                <p>Waiting for the lucky winner! 🎂</p>
+            </div>
+
+            <!-- Button to randomly select a winner -->
+            <button type="button" id="drawButton" class="draw-button">
+                🎉 Draw Winner!
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Connects the JavaScript file -->
+    <script src="actions.js"></script>
+
+</body>
+</html>

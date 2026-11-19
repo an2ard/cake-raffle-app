@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Gets the Draw Winner button from the HTML.
     var drawButton = document.getElementById("drawButton");
 
+    // Gets the Reset button from the HTML.
+    var resetButton = document.getElementById("resetButton");
+
     // Creates an empty array to store participant names.
     var participants = [];
 
@@ -34,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Checks if the name is empty.
         if (name === "") {
-            // Stops the registration if no name was entered.
             return;
         }
 
@@ -56,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Clears the name input field.
         participantName.value = "";
 
-        // Removes the previous winner message when a new participant joins.
+        // Resets the winner message when a new participant joins.
         winnerDisplay.textContent = "Waiting for the lucky winner! 🎂";
 
     });
@@ -74,10 +76,10 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Generates a random number based on the number of participants.
+        // Generates a random number based on the participants.
         var randomIndex = Math.floor(Math.random() * participants.length);
 
-        // Selects the participant at the randomly generated position.
+        // Selects the participant at the random position.
         var winner = participants[randomIndex];
 
         // Creates a paragraph element for the winner.
@@ -89,8 +91,28 @@ document.addEventListener("DOMContentLoaded", function() {
         // Displays the winner's name with cake and party emojis.
         winnerMessage.textContent = "🎂🎉 " + winner + " 🎉🎂";
 
-        // Replaces the previous winner display with the new winner.
+        // Displays the winner's name.
         winnerDisplay.replaceChildren(winnerMessage);
+
+    });
+
+    // Runs when the Reset button is clicked.
+    resetButton.addEventListener("click", function() {
+
+        // Clears all participants from the array.
+        participants.length = 0;
+
+        // Removes all names from the participants list.
+        participantsList.innerHTML = "";
+
+        // Resets the participant counter to zero.
+        participantCount.textContent = "Total participants: 0";
+
+        // Restores the original winner message.
+        winnerDisplay.textContent = "Waiting for the lucky winner! 🎂";
+
+        // Clears the name input field.
+        participantName.value = "";
 
     });
 

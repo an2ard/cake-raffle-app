@@ -151,6 +151,19 @@ button {
     transform: translateY(-2px);
 }
 
+/* Styles the reset button */
+.reset-button {
+    width: 100%;
+    background-color: #007bff;
+    margin-top: 12px;
+}
+
+/* Changes the reset button color when hovered over */
+.reset-button:hover {
+    background-color: #1367c0;
+    transform: translateY(-2px);
+}
+
 /* Styles the winner's name */
 .winner-name {
     color: #e91e63;
